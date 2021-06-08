@@ -10,7 +10,7 @@ sh 'ng build --prod'
 stage ('Dockerimage'){
 steps {
 sh 'docker build . -t myapp'
-sh 'docker run -d --name myapp -p 8080:80 myapp'
+sh 'docker run -d --name myapp -p 8081:80 myapp'
  }
 }
  }
