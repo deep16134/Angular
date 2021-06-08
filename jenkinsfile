@@ -15,7 +15,7 @@ sh 'docker run -d --name myapp -p 8081:80 myapp'
 }
 stage ('performance'){
 steps {
-sh 'npm install -g lighthouse'
+sh 'npm install lighthouse'
 sh 'lighthouse http://54.74.221.227:8081/ --chrome-flags="--headless"'
 }
 }
