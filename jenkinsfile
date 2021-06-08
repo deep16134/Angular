@@ -1,10 +1,12 @@
 pipeline {
 agent any
 stages {
-stage ('checkout'){
-steps {
-git branch: 'master'	 , credentials Id: 'eae2929f-07d9-4b14-8d6a-eb91ca5c2e5e' , url: 'https://github.com/deep16134/Angular.git'
-  }
+stage ('Build'){
+steps { 
+sh 'npm i'
+sh 'npm install -g @angular/cli'
+sh 'ng build --prod'
  }
+}
  }
  }
